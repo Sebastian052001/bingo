@@ -25,6 +25,7 @@ def test_celdas_mayor_15():
             contador = contador + celda
     assert contador <= 15
 
+#comprueba que ninguna de las columnas del carton esten absolutamente vacias
 def test_columna():
     mi_carton = carton()
     for x in range(0,8): 

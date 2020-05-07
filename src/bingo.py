@@ -77,7 +77,18 @@ def validar_avance_filas(carton):
                 casilla_anterior = celda
     return bool_filas
 
-
+#Valida que en cada columna los numeros avancen de menor a mayor
+def validar_avance_columnas(carton):
+    bool_filas = True
+    for fila in range (0,9):
+        casilla_anterior = -1
+        for columna in range(0,3):
+                celda = carton[columna][fila]
+                if celda < casilla_anterior and celda != 0:
+                    bool_filas = False
+                if celda != 0:
+                    casilla_anterior = celda
+    return bool_filas
 
 #Muestra en pantalla el carton
 print(carton())

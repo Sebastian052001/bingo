@@ -64,5 +64,20 @@ def validar_uno_a_noventa(carton):
               casillas_validas = casillas_validas + 1
     return casillas_validas == 27
 
+#Valida que en cada fila los numeros avancen de menor a mayor
+def validar_avance_filas(carton):
+    bool_filas = True
+    for columna in range(0,3):
+        casilla_anterior = -1
+        for fila in range(0,9):
+            celda = carton[columna][fila]
+            if celda < casilla_anterior and celda != 0:
+                bool_filas = False
+            if celda != 0:
+                casilla_anterior = celda
+    return bool_filas
+
+
+
 #Muestra en pantalla el carton
 print(carton())

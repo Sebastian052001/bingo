@@ -90,5 +90,24 @@ def validar_avance_columnas(carton):
                     casilla_anterior = celda
     return bool_filas
 
+#Valida que no haya numeros repetidos en el mismo carton
+def validar_no_repetidos(carton):
+    bool_repetidos = True
+    lista_elementos_carton = []
+    #Creo una lista que contenga todos los elementos del carton que no sean 0
+    for columna in range(0,3):
+        for fila in range(0,9):
+            celda = carton[columna][fila]
+            if celda != 0:
+                lista_elementos_carton.append(celda)
+    #Si la cantidad de veces que aparece un elemento en la lista es mayor a 1, devuelve False
+    for columna in range (0,3):
+        for fila in range(0,9):
+            celda = carton[columna][fila]
+            if celda != 0:
+                if lista_elementos_carton.count(celda) != 1:
+                    bool_repetidos = False
+    return bool_repetidos
+    
 #Muestra en pantalla el carton
 print(carton())

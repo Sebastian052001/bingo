@@ -108,6 +108,71 @@ def validar_no_repetidos(carton):
                 if lista_elementos_carton.count(celda) != 1:
                     bool_repetidos = False
     return bool_repetidos
+
+#Valida que cada fila de un carton tenga exactamente 5 filas ocupadas
+def validar_5_filas_ocupadas(carton):
+    bool_valido = True
+    contador = 5
+    for x in range(0,3):
+        if contador != 5:
+            bool_valido = False
+        contador = 0
+        for y in range(0,9):
+            if carton[x][y]!= 0:
+                contador = contador + 1
+    return bool_valido
+
+#Valida que cada carton sea una matrix de 3x9
+def validar_matrix(carton):
+    bool_valido = True
+    if len(carton) != 3:
+        bool_valido = False
+    else:
+        for x in range(0,3):
+            if len(carton[x]) != 9:
+                bool_valido = False
+    return bool_valido
+
+#Valida que cada carton no tenga ninguna columna con sus tres celdas ocupadas
+def validar_columnas_ocupadas(carton):
+    bool_valido = True
+    for x in range(0,9):
+        if (carton[0][x] == 0) and (carton[1][x] == 0) and (carton[2][x] == 0):
+            bool_valido = False
+    return bool_valido
+
+#Valida que solo existan 3 columnas con solo una celda ocupada
+def validar_3_columnas(carton):
+    bool_valido = True
+    contadorcolumnas = 0
+    for y in range (0,9):
+        contador = 0
+        for x in range(0,3):
+            if carton[x][y] != 0:
+                contador = contador + 1
+        if contador == 1:
+            contadorcolumnas = contadorcolumnas + 1
+    if contadorcolumnas != 3:
+        bool_valido = False
+    return bool_valido
+
+#Valida que en una fila no existan mas de dos celdas vacias consecutivas
+def validar_dosvacias_consecutivas(carton):
+    bool_valido = True
+    for x in range (0,3):
+        for y in range (0,7):
+            if (carton[x][y] == 0) and (carton[x][y+1] == 0) and (carton[x][y+2] == 0):
+                bool_valido = False
+    return bool_valido
+
+#Valida que en una fila no existan mas de dos celdas ocupadas consecutivas
+def validar_dosocupadas_consecutivas(carton):
+    bool_valido = True
+    for x in range (0,3):
+        for y in range (0,7):
+            if (carton[x][y] != 0) and (carton[x][y+1] != 0) and (carton[x][y+2] != 0):
+                bool_valido = False
+    return bool_valido
     
 #Muestra en pantalla el carton
 print(carton())

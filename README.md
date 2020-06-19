@@ -1,0 +1,1 @@
+[![Build Status](https://travis-ci.org/Sebastian052001/bingo.svg?branch=master)](https://travis-ci.org/Sebastian052001/bingo)

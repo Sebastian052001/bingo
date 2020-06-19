@@ -175,4 +175,4 @@ def validar_dosocupadas_consecutivas(carton):
     return bool_valido
     
 #Muestra en pantalla el carton
-print(carton())
+#print(carton())

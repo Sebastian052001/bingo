@@ -261,7 +261,7 @@ def transformar_carton(carton):
     return carton_interpretable
 
 #Corre todos los tests en el carton que se le pase y devuelve True si pasa todos ellos de forma satisfactoria
-def tests_carton(carton_transformado):
+def pruebas_carton(carton_transformado):
     #Por motivos que desconozco al dejar un enter por cada or en el if de abajo el programa lo toma como un error de sintaxis por lo que me veo forzado a escribir todo en la misma linea
     if (validar_quince_numeros(carton_transformado) != True) or (validar_no_menor_a_quince(carton_transformado) != True) or (validar_no_mayor_a_quince(carton_transformado) != True) or (validar_no_columnas_vacias(carton_transformado) != True) or (validar_no_filas_vacias(carton_transformado) != True) or (validar_uno_a_noventa(carton_transformado) != True) or (validar_avance_filas(carton_transformado) != True) or (validar_avance_columnas(carton_transformado) != True) or (validar_no_repetidos(carton_transformado) != True) or (validar_5_filas_ocupadas(carton_transformado) != True) or (validar_matrix(carton_transformado) != True) or (validar_columnas_ocupadas(carton_transformado) != True) or (validar_3_columnas(carton_transformado) != True) or (validar_dosvacias_consecutivas(carton_transformado) != True) or (validar_dosocupadas_consecutivas(carton_transformado) != True):
         return False
@@ -276,7 +276,7 @@ def carton_definitivo():
         #print(contador)
         carton_original = intentoCarton()
         carton_transformado = transformar_carton(carton_original)
-        if tests_carton(carton_transformado) == True:
+        if pruebas_carton(carton_transformado) == True:
             break
     return carton_transformado
 

@@ -3,6 +3,7 @@ from src.bingo import intentoCarton
 from src.bingo import transformar_carton
 from src.bingo import pruebas_carton
 from src.bingo import carton_definitivo
+from src.bingo import imprimirCarton
 
 def test_longitud_carton():
     bool_Longitud = True
@@ -55,3 +56,5 @@ def test_carton_defintivo():
             if(len(mi_carton[x]) != 9):
                 bool_Longitud = False
     assert bool_Longitud == True
+
+

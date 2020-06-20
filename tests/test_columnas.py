@@ -9,6 +9,12 @@ def test_columnas_ocupadas():
        (0,0,1,1,0,1,0,0,1),
    )
     assert validar_columnas_ocupadas(mi_carton) == True
+    mi_carton_falso = (
+       (0,1,1,1,0,0,0,0,1),
+       (1,0,1,0,0,0,1,1,0),
+       (0,0,1,1,0,1,0,0,1),
+   )
+    assert validar_columnas_ocupadas(mi_carton_falso) == False
 
 def test_3_columnas():
     mi_carton = (
@@ -17,3 +23,9 @@ def test_3_columnas():
        (0,0,1,1,0,1,0,1,1),
    )
     assert validar_3_columnas(mi_carton) == True
+    mi_carton_falso = (
+       (0,1,0,1,1,0,1,0,1),
+       (1,0,0,0,1,1,1,1,0),
+       (0,0,1,0,0,1,0,1,1),
+   )
+    assert validar_3_columnas(mi_carton_falso) == False

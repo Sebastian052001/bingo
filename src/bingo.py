@@ -136,7 +136,7 @@ def validar_matrix(carton):
                 bool_valido = False
     return bool_valido
 
-#Valida que cada carton no tenga ninguna columna con sus tres celdas ocupadas
+#Valida que cada carton no tenga ninguna columna con sus tres celdas vacias
 def validar_columnas_ocupadas(carton):
     bool_valido = True
     for x in range(0,9):

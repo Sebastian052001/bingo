@@ -11,6 +11,12 @@ def test_filas_vacias():
        (0,0,0,0,0,0,0,0,1),
    )
     assert validar_no_filas_vacias(mi_carton) == True
+    mi_carton_falso = (
+       (0,0,0,0,0,0,0,0,1),
+       (0,0,0,0,0,0,1,0,0),
+       (0,0,0,0,0,0,0,0,0),
+   )
+    assert validar_no_filas_vacias(mi_carton_falso) == False
 
 def test_5_filas_ocupadas():
     mi_carton = (
@@ -19,6 +25,12 @@ def test_5_filas_ocupadas():
        (0,1,0,1,1,0,1,1,0),
    )
     assert validar_5_filas_ocupadas(mi_carton) == True
+    mi_carton_falso = (
+       (1,0,1,0,1,0,1,1,0),
+       (1,0,1,0,1,1,1,1,0),
+       (0,1,0,1,1,0,1,1,0),
+   )
+    assert validar_5_filas_ocupadas(mi_carton_falso) == False
 
 def test_dosvacias_consecutivas():
     mi_carton = (
@@ -27,6 +39,12 @@ def test_dosvacias_consecutivas():
        (0,1,0,1,0,0,1,1,0),
    )
     assert validar_dosvacias_consecutivas(mi_carton) == True
+    mi_carton_falso = (
+       (1,0,1,0,1,0,1,1,0),
+       (1,0,1,0,1,0,1,1,0),
+       (0,1,0,1,0,0,0,1,0),
+   )
+    assert validar_dosvacias_consecutivas(mi_carton_falso) == False
 
 def test_dosocupadas_consecutivas():
     mi_carton = (
@@ -35,3 +53,9 @@ def test_dosocupadas_consecutivas():
        (0,1,0,1,0,0,1,1,0),
    )
     assert validar_dosocupadas_consecutivas(mi_carton) == True
+    mi_carton_falso = (
+       (1,0,1,0,1,1,1,1,1),
+       (1,0,1,0,1,0,1,1,0),
+       (0,1,0,1,0,0,1,1,0),
+   )
+    assert validar_dosocupadas_consecutivas(mi_carton_falso) == False

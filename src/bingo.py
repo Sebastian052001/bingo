@@ -2,6 +2,7 @@ import math
 import random
 #Los 0 representan celdas vacias en el carton.
 #Los 1 representan celdas ocupadas en el carton.
+#Antigua definicion de carton:
 def carton():
     carton = (
         (0,1,0,1,0,1,1,0,1),

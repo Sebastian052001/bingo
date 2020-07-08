@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/Sebastian052001/bingo.svg?branch=master)](https://travis-ci.org/Sebastian052001/bingo)
-[![Coverage Status](https://coveralls.io/repos/github/Sebastian052001/bingo/badge.svg?branch=master)](https://coveralls.io/github/
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Sebastian052001/bingo/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Sebastian052001/bingo/?branch=master)Sebastian052001/bingo?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/Sebastian052001/bingo/badge.svg?branch=master)](https://coveralls.io/github/Sebastian052001/bingo?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Sebastian052001/bingo/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Sebastian052001/bingo/?branch=master)
 # Funcionamiento
 La funcion intentoCarton creara en base a los parametros designados un carton de bingo, el cual luego sera puesto a prueba por una serie de tests. En el caso de que no cumpla con los parametros especificados, la funcion intentoCarton volvera a ejecutarse hasta que se de con un carton que si cumpla con los parametros. Finalmente este carton valido se guardara en Bingo.html, donde se mostrara con una interfaz gráfica.
 # Ejemplo de uso
